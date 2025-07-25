@@ -22,6 +22,8 @@
       --cream: #f9f7f4;
       --beige: #e9e3dc;
       --text: #3e342a;
+      --light-gold: #d4c4a0;
+      --soft-beige: #f4efe8;
     }
     * {
       margin: 0;
@@ -143,6 +145,8 @@
       align-items: center;
       gap: 14px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
     }
     .benefit-item:hover {
       transform: translateY(-5px);
@@ -152,6 +156,180 @@
       font-size: 24px;
       color: var(--gold);
     }
+
+    /* Ingredients Submenu Styling */
+    .ingredients-toggle {
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 14px;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+      margin-top: 8px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+    .ingredients-toggle:hover {
+      opacity: 1;
+    }
+    
+    .ingredients-submenu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      min-width: 400px;
+      max-width: 600px;
+      height: 100vh;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--soft-beige) 100%);
+      backdrop-filter: blur(20px);
+      border-left: 1px solid rgba(191, 164, 122, 0.2);
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+      padding: 40px 30px;
+    }
+    
+    .ingredients-submenu.open {
+      right: 0;
+    }
+    
+    .submenu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(43, 43, 43, 0.4);
+      backdrop-filter: blur(2px);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .submenu-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .submenu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(191, 164, 122, 0.3);
+    }
+    
+    .submenu-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: var(--charcoal);
+      margin: 0;
+    }
+    
+    .close-submenu {
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--charcoal);
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+    
+    .close-submenu:hover {
+      background-color: rgba(191, 164, 122, 0.1);
+    }
+    
+    .submenu-intro {
+      font-size: 16px;
+      color: #5f5145;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: center;
+      font-style: italic;
+    }
+    
+    .ingredient-detail {
+      margin-bottom: 40px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 16px;
+      border-left: 4px solid var(--gold);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .ingredient-detail:hover {
+      transform: translateX(5px);
+      box-shadow: 0 8px 25px rgba(191, 164, 122, 0.15);
+    }
+    
+    .ingredient-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    
+    .ingredient-latin {
+      font-style: italic;
+      font-size: 14px;
+      color: #8c7a6a;
+      margin-left: 10px;
+    }
+    
+    .ingredient-description {
+      font-size: 15px;
+      color: #5f5145;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    
+    .ingredient-description strong {
+      color: var(--charcoal);
+    }
+    
+    .ingredient-why {
+      font-size: 14px;
+      color: #6d5f52;
+      font-style: italic;
+      background: rgba(191, 164, 122, 0.1);
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    
+    .botanica-promise {
+      background: linear-gradient(135deg, var(--soft-beige) 0%, rgba(191, 164, 122, 0.1) 100%);
+      padding: 30px 25px;
+      border-left: 4px solid var(--gold);
+      border-radius: 16px;
+      margin-top: 40px;
+    }
+    
+    .botanica-promise h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: var(--charcoal);
+      margin-bottom: 15px;
+    }
+    
+    .botanica-promise p {
+      font-size: 15px;
+      color: #5f5145;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
     .ritual {
       max-width: 700px;
       text-align: center;
@@ -244,6 +422,7 @@
       margin-top: 14px;
       text-align: center;
     }
+
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -258,16 +437,12 @@
       .hero h1 {
         font-size: 32px;
       }
+      .ingredients-submenu {
+        width: 90%;
+        min-width: auto;
+      }
     }
   </style>
-  <script>
-    function showThankYou(event) {
-      event.preventDefault();
-      const form = event.target;
-      form.querySelector('#thank-you').style.display = 'block';
-      form.reset();
-    }
-  </script>
 </head>
 <body>
 
@@ -284,7 +459,6 @@
   </div>
 </section>
 
-
 <section class="section">
   <h2>Artisanal Heritage Meets Modern Luxury</h2>
   <p class="story-text">
@@ -292,10 +466,34 @@
   </p>
 
   <div class="benefits-list">
-    <div class="benefit-item"><span class="benefit-icon">💧</span> Deeply nourishing & hydrating</div>
-    <div class="benefit-item"><span class="benefit-icon">🌿</span> Rich in essential fatty acids & natural retinoids</div>
-    <div class="benefit-item"><span class="benefit-icon">✨</span> Supports cellular renewal & skin elasticity</div>
-    <div class="benefit-item"><span class="benefit-icon">🏔️</span> Ethical, wild-harvested ingredients from the Andes</div>
+    <div class="benefit-item" onclick="openIngredientsSubmenu()">
+      <span class="benefit-icon">💧</span> 
+      <div>
+        Deeply nourishing & hydrating
+        <button class="ingredients-toggle">explore ingredients →</button>
+      </div>
+    </div>
+    <div class="benefit-item" onclick="openIngredientsSubmenu()">
+      <span class="benefit-icon">🌿</span> 
+      <div>
+        Rich in essential fatty acids & natural retinoids
+        <button class="ingredients-toggle">discover botanicals →</button>
+      </div>
+    </div>
+    <div class="benefit-item" onclick="openIngredientsSubmenu()">
+      <span class="benefit-icon">✨</span> 
+      <div>
+        Supports cellular renewal & skin elasticity
+        <button class="ingredients-toggle">view formulation →</button>
+      </div>
+    </div>
+    <div class="benefit-item" onclick="openIngredientsSubmenu()">
+      <span class="benefit-icon">🏔️</span> 
+      <div>
+        Ethical, wild-harvested ingredients from the Andes
+        <button class="ingredients-toggle">see sourcing →</button>
+      </div>
+    </div>
   </div>
 
   <div class="ritual">
@@ -339,9 +537,103 @@
   </section>
 </section>
 
+<!-- Ingredients Submenu -->
+<div class="submenu-overlay" onclick="closeIngredientsSubmenu()"></div>
+<div class="ingredients-submenu" id="ingredientsSubmenu">
+  <div class="submenu-header">
+    <h2 class="submenu-title">Our Sacred Botanicals</h2>
+    <button class="close-submenu" onclick="closeIngredientsSubmenu()">✕</button>
+  </div>
+  
+  <p class="submenu-intro">We believe in the elegant power of nature. Each ingredient is chosen with care, purpose, and deep respect for its healing heritage.</p>
+  
+  <div class="ingredient-detail">
+    <h3 class="ingredient-name">Mango Butter <span class="ingredient-latin">(Mangifera Indica)</span></h3>
+    <p class="ingredient-description"><strong>The Velvety Heart of Our Formula —</strong> Our premium mango butter is sourced from the kernels of wild-harvested mangoes, cold-pressed to preserve its natural healing compounds. Unlike common shea butter, mango butter offers a silkier, less greasy texture that melts effortlessly into skin. Rich in vitamins A and C, this luxurious base provides deep nourishment while creating the perfect canvas for our active botanicals.</p>
+    <div class="ingredient-why"><strong>Why we chose it:</strong> The creamy, almost whipped texture elevates the sensory experience while delivering profound moisturization without heaviness.</div>
+  </div>
+
+  <div class="ingredient-detail">
+    <h3 class="ingredient-name">Golden Jojoba Oil <span class="ingredient-latin">(Simmondsia Chinensis)</span></h3>
+    <p class="ingredient-description"><strong>Nature's Perfect Skin Mimic —</strong> Technically a liquid wax, our cold-pressed jojoba oil mirrors your skin's natural sebum so closely that it absorbs instantly without clogging pores. Sourced from sustainable farms in the American Southwest, this golden elixir provides weightless hydration while balancing your skin's natural oil production.</p>
+    <div class="ingredient-why"><strong>Why we chose it:</strong> Its unique molecular structure allows it to penetrate deeply while leaving skin feeling silk-smooth, never greasy. This grants it the unique ability to regulate skin's natural oil production while providing lightweight, long-lasting moisture without clogging pores.</div>
+  </div>
+
+  <div class="ingredient-detail">
+    <h3 class="ingredient-name">Pure Beeswax <span class="ingredient-latin">(Cera Alba)</span></h3>
+    <p class="ingredient-description"><strong>The Protective Guardian —</strong> Our pharmaceutical-grade beeswax comes from ethical beekeepers who prioritize hive health. This natural emulsifier not only gives our balm its perfect texture but creates a breathable protective barrier that locks in moisture while allowing skin to function naturally.</p>
+    <div class="ingredient-why"><strong>Vegan Alternative:</strong> Candelilla wax from the Mexican desert shrub – equally protective with a slightly firmer texture.</div>
+  </div>
+
+  <div class="ingredient-detail">
+    <h3 class="ingredient-name">Sun-Infused Calendula Oil <span class="ingredient-latin">(Calendula Officinalis)</span></h3>
+    <p class="ingredient-description"><strong>The Golden Healer —</strong> Our calendula-infused oil begins with organic petals slowly steeped in premium sunflower oil using traditional solar infusion methods. For centuries, calendula has been revered as "nature's first aid" — its golden flowers contain powerful compounds that soothe irritation, reduce redness, and accelerate skin's natural healing processes.</p>
+    <div class="ingredient-why"><strong>The ritual:</strong> Each batch is sun-infused for 4–6 weeks, creating a potent amber oil that carries the flower's complete therapeutic profile.</div>
+  </div>
+
+  <div class="ingredient-detail">
+    <h3 class="ingredient-name">German Chamomile Essential Oil <span class="ingredient-latin">(Matricaria Chamomilla)</span></h3>
+    <p class="ingredient-description"><strong>The Gentle Warrior —</strong> Steam-distilled from wild German chamomile flowers, this precious blue-tinted essential oil contains azulene – nature's anti-inflammatory powerhouse. Just a few drops transform our balm into a calming sanctuary for stressed, reactive skin. The soft, honey-apple fragrance provides aromatherapeutic benefits that soothe both skin and spirit.</p>
+    <div class="ingredient-why"><strong>Concentration:</strong> Expertly diluted to therapeutic levels (0.5%) for maximum benefit without sensitivity.</div>
+  </div>
+
+  <div class="ingredient-detail">
+    <h3 class="ingredient-name">Vitamin E Oil <span class="ingredient-latin">(Tocopherol)</span></h3>
+    <p class="ingredient-description"><strong>The Antioxidant Shield —</strong> Our non-GMO vitamin E oil is derived from sunflower seeds, providing the most bioactive form of this essential nutrient. As a powerful antioxidant, it protects your skin from environmental damage while supporting the skin barrier's natural repair processes. It also naturally preserves our formula, ensuring every drop remains fresh and potent.</p>
+    <div class="ingredient-why"><strong>Why it matters:</strong> Clinical studies show vitamin E can help reduce the appearance of scars and support healthy skin regeneration.</div>
+  </div>
+
+  <div class="ingredient-detail">
+    <h3 class="ingredient-name">Cold-Pressed Rosehip Seed Oil <span class="ingredient-latin">(Rosa Canina)</span></h3>
+    <p class="ingredient-description"><strong>The Regenerative Elixir —</strong> Harvested from wild rose bushes in the Andes Mountains, our rosehip seed oil is cold-pressed within hours of harvest to preserve its delicate essential fatty acids and natural vitamin A. This ruby-colored oil is renowned for its ability to improve skin texture, fade discoloration, and support cellular renewal.</p>
+    <div class="ingredient-why"><strong>The science:</strong> Rich in omega-3, omega-6, and natural retinoids that work synergistically to restore skin's youthful resilience.</div>
+  </div>
+
+  <div class="botanica-promise">
+    <h3>The Hymne Solide Promise</h3>
+    <p>Every ingredient is chosen not just for what it does, but for how it makes your skin feel. Together, these seven powerful botanicals create a healing symphony – rescuing stressed skin while restoring its natural radiance and resilience.</p>
+    <p><strong>Simple. Pure. Effective.</strong><br>
+    No synthetic fragrances. No harsh preservatives. No unnecessary fillers.<br>
+    Just the healing power of plants, perfected through artisanal craftsmanship.</p>
+  </div>
+</div>
+
 <footer style="padding: 40px 20px; text-align: center; font-size: 14px; color: #5f5145; background-color: #f1ede9; border-top: 1px solid #d8cec4;">
   <p>&copy; 2025 Hymne Solide. All rights reserved.</p>
   <p><a href="/privacy-policy.html" style="color: #5f5145; text-decoration: underline;">Privacy Policy</a></p>
 </footer>
+
+<script>
+  function showThankYou(event) {
+    event.preventDefault();
+    const form = event.target;
+    form.querySelector('#thank-you').style.display = 'block';
+    form.reset();
+  }
+
+  function openIngredientsSubmenu() {
+    const submenu = document.getElementById('ingredientsSubmenu');
+    const overlay = document.querySelector('.submenu-overlay');
+    submenu.classList.add('open');
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeIngredientsSubmenu() {
+    const submenu = document.getElementById('ingredientsSubmenu');
+    const overlay = document.querySelector('.submenu-overlay');
+    submenu.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close submenu with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeIngredientsSubmenu();
+    }
+  });
+</script>
+
 </body>
 </html>
