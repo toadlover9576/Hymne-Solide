@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Rescue & Restore Balm by Hymne Solide – an artisanal rosehip balm crafted from wild-harvested ingredients to nourish, regenerate, and restore your skin’s natural glow." />
+  <meta name="description" content="Rescue & Restore Balm by Hymne Solide – an artisanal rosehip balm crafted from wild-harvested ingredients to nourish, regenerate, and restore your skin's natural glow." />
   <title>Rescue & Restore Balm – Hymne Solide</title>
     <!-- Favicon and App Icons -->
   <link rel="icon" href="Favicon/favicon.ico" type="image/x-icon">
@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="Favicon/android-chrome-512x512.png">
   <link rel="manifest" href="Favicon/site.webmanifest">
-  <meta name="description" content="Luxurious rosehip balm crafted with wild botanicals to restore your skin’s natural glow." />
+  <meta name="description" content="Luxurious rosehip balm crafted with wild botanicals to restore your skin's natural glow." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -69,16 +69,16 @@
       color: #5f5145;
       margin-bottom: 32px;
     }
-  .hero .image {
-  flex: 1 1 400px;
-  min-height: 400px;
-  background-image: url('Hymne-Solide/%20Hero%20Images/%20Hero%20Presentation/hero-presentation.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
+    .hero .image {
+      flex: 1 1 400px;
+      min-height: 400px;
+      background-image: url('Hymne-Solide/%20Hero%20Images/%20Hero%20Presentation/hero-presentation.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
 
     .btn-primary {
       background-color: var(--charcoal);
@@ -90,11 +90,13 @@
       border: none;
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(43, 43, 43, 0.3);
+      transition: all 0.3s ease;
     }
     .btn-primary:hover {
       background-color: var(--gold);
       color: var(--charcoal);
       box-shadow: 0 10px 25px rgba(191, 164, 122, 0.7);
+      transform: translateY(-2px);
     }
     .section {
       padding: 80px;
@@ -140,6 +142,11 @@
       display: flex;
       align-items: center;
       gap: 14px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .benefit-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(191, 164, 122, 0.25);
     }
     .benefit-icon {
       font-size: 24px;
@@ -174,6 +181,11 @@
       font-size: 16px;
       color: var(--charcoal);
       flex: 1 1 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(191, 164, 122, 0.25);
     }
     .testimonial::before {
       content: '';
@@ -200,6 +212,12 @@
       border-radius: 25px;
       border: 1px solid #ccc;
       font-size: 15px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .newsletter input[type="email"]:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(191, 164, 122, 0.2);
     }
     .newsletter button {
       background-color: var(--charcoal);
@@ -211,11 +229,13 @@
       font-size: 15px;
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(43, 43, 43, 0.3);
+      transition: all 0.3s ease;
     }
     .newsletter button:hover {
       background-color: var(--gold);
       color: var(--charcoal);
       box-shadow: 0 8px 22px rgba(191, 164, 122, 0.7);
+      transform: translateY(-2px);
     }
     #thank-you {
       display: none;
@@ -231,6 +251,12 @@
       }
       .hero .image {
         height: 320px;
+      }
+      .section {
+        padding: 40px 24px;
+      }
+      .hero h1 {
+        font-size: 32px;
       }
     }
   </style>
@@ -250,7 +276,7 @@
 <section class="hero">
   <div class="text">
     <h1>Rescue & Restore — The Artisanal Rosehip Balm for Timeless Radiance</h1>
-    <p>Crafted from wild-harvested rosehip seed oil and sacred botanicals, this balm nourishes, regenerates, and restores your skin’s natural glow.</p>
+    <p>Crafted from wild-harvested rosehip seed oil and sacred botanicals, this balm nourishes, regenerates, and restores your skin's natural glow.</p>
     <button class="btn-primary" type="button">Experience the Elixir</button>
   </div>
   <div class="image">
@@ -262,7 +288,7 @@
 <section class="section">
   <h2>Artisanal Heritage Meets Modern Luxury</h2>
   <p class="story-text">
-    Every jar of our <strong>Rescue & Restore Balm</strong> begins its journey in the wild Andes Mountains, where rosehip seeds are ethically harvested at peak potency. Cold-pressed within hours, the precious oil captures the pure essence of nature’s renewal. This sacred botanical blend embodies centuries-old wisdom, expertly crafted for the modern connoisseur who values purity, ritual, and transformative skincare.
+    Every jar of our <strong>Rescue & Restore Balm</strong> begins its journey in the wild Andes Mountains, where rosehip seeds are ethically harvested at peak potency. Cold-pressed within hours, the precious oil captures the pure essence of nature's renewal. This sacred botanical blend embodies centuries-old wisdom, expertly crafted for the modern connoisseur who values purity, ritual, and transformative skincare.
   </p>
 
   <div class="benefits-list">
@@ -275,32 +301,24 @@
   <div class="ritual">
     <h2>How to Use & Ritual</h2>
     <p>
-      Embrace a mindful skincare ritual each morning and night: gently warm a small amount of balm between your fingertips, then massage over face, pulse points, or areas in need of deep restoration. Let the sacred botanicals envelop your senses and reveal your skin’s natural luminosity.
+      Embrace a mindful skincare ritual each morning and night: gently warm a small amount of balm between your fingertips, then massage over face, pulse points, or areas in need of deep restoration. Let the sacred botanicals envelop your senses and reveal your skin's natural luminosity.
     </p>
-  <section class="hero">
-  <div class="text">
-    <h1>Rescue & Restore — The Artisanal Rosehip Balm for Timeless Radiance</h1>
-    <p>Crafted from wild-harvested rosehip seed oil and sacred botanicals, this balm nourishes, regenerates, and restores your skin’s natural glow.</p>
-    <button class="btn-primary" type="button">Experience the Elixir</button>
+    <img
+      src="Hero Images/Rescue and Restore Balm.png"
+      loading="lazy"
+      decoding="async"
+      alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening." />
   </div>
-  <div class="image">
-   <img
-  src="Hero Images/Rescue and Restore Balm.png"
-  loading="lazy"
-  decoding="async"
-  alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening." />
- </div>
-</section>
 
   <section style="margin-top: 80px;">
     <h2>What Our Connoisseurs Say</h2>
     <div class="testimonials">
       <blockquote class="testimonial">
-        <p>This balm transformed my skin — its texture is divine, and the glow is undeniable. Truly a treasure from nature’s heart.</p>
+        <p>This balm transformed my skin — its texture is divine, and the glow is undeniable. Truly a treasure from nature's heart.</p>
         <cite>— Lila M., NYC</cite>
       </blockquote>
       <blockquote class="testimonial">
-        <p>The rich scent and silky feel turn every application into a calming ritual. I’m obsessed with how it nourishes without heaviness.</p>
+        <p>The rich scent and silky feel turn every application into a calming ritual. I'm obsessed with how it nourishes without heaviness.</p>
         <cite>— Adrian K., San Francisco</cite>
       </blockquote>
       <blockquote class="testimonial">
@@ -313,7 +331,7 @@
   <section class="newsletter">
     <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="showThankYou(event)">
       <input type="hidden" name="form-name" value="newsletter" />
-      <div style="display: none;"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></div>
+      <div style="display: none;"><label>Don't fill this out if you're human: <input name="bot-field" /></label></div>
       <input type="email" name="email" placeholder="you@example.com" required />
       <button type="submit">Subscribe</button>
       <p id="thank-you">Thank you for subscribing — you'll hear from us soon 🌿</p>
