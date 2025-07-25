@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hymne Solide – Artisanal Healing Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --charcoal: #2b2b2b;
+      --gold: #bfa47a;
+      --cream: #f9f7f4;
+      --beige: #e9e3dc;
+      --text: #3e342a;
+      --soft-black: rgba(43, 43, 43, 0.7);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 24px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid #ddd5cc;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    nav a {
+      margin: 0 16px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      position: relative;
+    }
+
+    .hero {
+      height: 90vh;
+      background-color: var(--beige);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
+    }
+
+    .hero .text {
+      max-width: 50%;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #5f5145;
+      margin-bottom: 40px;
+    }
+
+    .hero .btn {
+      background-color: var(--charcoal);
+      color: var(--gold);
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .hero .image {
+      width: 40%;
+      height: 400px;
+      background-color: #ccc;
+      border-radius: 12px;
+    }
+
+    .section {
+      padding: 100px 80px;
+      background-color: var(--cream);
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      max-width: 700px;
+      font-size: 17px;
+      color: #5f4f42;
+    }
+
+    .product-grid {
+      display: flex;
+      gap: 40px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      flex: 1 1 250px;
+      background-color: #e3ddd6;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      background-color: #c1b6ab;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .product-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .product-desc {
+      font-size: 15px;
+      color: #6e5d50;
+    }
+
+    footer {
+      background-color: #e9e3dc;
+      padding: 60px 80px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    footer .col h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .newsletter input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 25px;
+      margin-right: 10px;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: var(--charcoal);
+      color: var(--gold);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Botanica Elixirs</div>
+    <nav>
+      <a href="#">Shop</a>
+      <a href="#">Philosophy</a>
+      <a href="#">Journal</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="text">
+      <h1>Artisanal Healing for the Modern Ritual</h1>
+      <p>Luxurious, natural remedies rooted in herbal wisdom and designed for the discerning self-care connoisseur.</p>
+      <a href="#" class="btn">Explore the Collection</a>
+    </div>
+    <div class="image"> <!-- Placeholder Image --></div>
+  </section>
+
+  <section class="section">
+    <h2>Our Signature Remedies</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-name">Rescue & Restore Balm</div>
+        <div class="product-desc">Soothes dry, cracked skin with lavender & frankincense.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-name">Muscle Mend Elixir</div>
+        <div class="product-desc">Warming relief for sore muscles with arnica and mint.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-image"></div>
+        <div class="product-name">Sleep Serenity Balm</div>
+        <div class="product-desc">Calming botanical blend for restful nights.</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">Our Story</a>
+      <a href="#">Ingredients</a>
+      <a href="#">Ethics</a>
+    </div>
+    <div class="col">
+      <h4>Help</h4>
+      <a href="#">FAQs</a>
+      <a href="#">Shipping & Returns</a>
+      <a href="#">Support</a>
+    </div>
+    <div class="col newsletter">
+      <h4>Receive Curated Insights</h4>
+      <form>
+        <input type="email" placeholder="you@example.com" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </footer>
+</body>
+</html>
+
