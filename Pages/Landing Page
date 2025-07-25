@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Rescue & Restore Balm by Botanica Elixirs – an artisanal rosehip balm crafted from wild-harvested ingredients to nourish, regenerate, and restore your skin’s natural glow." />
+  <meta name="description" content="Rescue & Restore Balm by Botanica Elixirs – an artisanal rosehip balm crafted from wild-harvested ingredients to nourish, regenerate, and restore your skin’s natural glow." />
   <title>Rescue & Restore Balm – Botanica Elixirs</title>
-<meta name="description" content="Luxurious rosehip balm crafted with wild botanicals to restore your skin’s natural glow." />
+  <meta name="description" content="Luxurious rosehip balm crafted with wild botanicals to restore your skin’s natural glow." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -64,9 +64,10 @@
     .hero .image {
       flex: 1 1 400px;
       min-height: 400px;
-      background-image:);
+      background-image: url('Hymne-Solide/Hero-Images/hero-presentation.jpg');
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
@@ -265,8 +266,10 @@
       Embrace a mindful skincare ritual each morning and night: gently warm a small amount of balm between your fingertips, then massage over face, pulse points, or areas in need of deep restoration. Let the sacred botanicals envelop your senses and reveal your skin’s natural luminosity.
     </p>
     <img
-         alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening."
-         loading="lazy" />
+      src="Hymne-Solide/Hero-Images/hero-image.jpg"
+      loading="lazy"
+      decoding="async"
+      alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening." />
   </div>
 
   <section style="margin-top: 80px;">
@@ -297,6 +300,7 @@
     </form>
   </section>
 </section>
+
 <footer style="padding: 40px 20px; text-align: center; font-size: 14px; color: #5f5145; background-color: #f1ede9; border-top: 1px solid #d8cec4;">
   <p>&copy; 2025 Botanica Elixirs. All rights reserved.</p>
   <p><a href="/privacy-policy.html" style="color: #5f5145; text-decoration: underline;">Privacy Policy</a></p>
