@@ -6,7 +6,7 @@
 <meta name="twitter:description" content="Handmade skincare powered by organic ingredients, wild botanicals, and ancient rituals. Eco-luxury for naturally radiant skin." />
 <meta name="description" content="Experience artisan-crafted, glow-boosting skincare with our botanical face balm – handmade from organic, plant-based ingredients for radiant, renewed skin." />
 <meta property="og:title" content="Hymne Solide | Botanical Rosehip Balm for Radiant, Restored Skin" />
-<meta property="og:description" content="A handcrafted blend of wild rosehip oil, calendula, and mango butter – designed to nourish, soothe, and restore your skin's natural glow." />
+<meta property="og:description" content="A handcrafted blend of wild rosehip oil, calendula, and mango butter – designed to nourish, soothe, and restore your skin’s natural glow." />
 <meta property="og:url" content="https://hymne-solide.netlify.app/" />
 <meta property="og:type" content="website" />
 <!-- Twitter Card -->
@@ -29,11 +29,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="Favicon/android-chrome-512x512.png">
   <link rel="manifest" href="Favicon/site.webmanifest">
   <meta name="description" content="Luxurious rosehip balm crafted with wild botanicals to restore your skin's natural glow." />
-  
-  <!-- Preload critical hero image for fastest LCP -->
-  <link rel="preload" as="image" href="Pages/Hero Presentation.png" fetchpriority="high">
-  
-  <!-- Critical CSS inline for fastest render -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --charcoal: #2b2b2b;
@@ -50,14 +46,14 @@
       box-sizing: border-box;
     }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: 'Inter', sans-serif;
       background-color: var(--cream);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
     .logo {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Playfair Display', serif;
       font-size: 24px;
       font-weight: 700;
       color: var(--text);
@@ -79,7 +75,7 @@
       flex: 1 1 400px;
     }
     .hero h1 {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Playfair Display', serif;
       font-size: 44px;
       color: var(--charcoal);
       margin-bottom: 16px;
@@ -93,25 +89,12 @@
     .hero .image {
       flex: 1 1 400px;
       min-height: 400px;
-      background-image: url('Pages/Hero Presentation.png');
+      background-image: url('Hymne-Solide/%20Hero%20Images/%20Hero%20Presentation/hero-presentation.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      position: relative;
-    }
-    .hero .image::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(233, 227, 220, 0.1) 0%, rgba(212, 196, 160, 0.05) 50%, rgba(191, 164, 122, 0.1) 100%);
-      border-radius: 16px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
     }
 
     .btn-primary {
@@ -138,7 +121,7 @@
       margin: 0 auto 80px auto;
     }
     .section h2 {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Playfair Display', serif;
       font-size: 36px;
       margin-bottom: 24px;
       color: var(--charcoal);
@@ -193,17 +176,17 @@
     .ingredients-toggle {
       background: none;
       border: none;
-      color: #6b5504;
+      color: var(--gold);
       font-size: 14px;
       cursor: pointer;
-      opacity: 1;
+      opacity: 0.7;
       transition: opacity 0.3s ease;
       margin-top: 8px;
-      font-family: inherit;
-      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
     }
     .ingredients-toggle:hover {
-      color: #4a3a02;
+      opacity: 1;
     }
     
     .ingredients-submenu {
@@ -257,7 +240,7 @@
     }
     
     .submenu-title {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Playfair Display', serif;
       font-size: 28px;
       color: var(--charcoal);
       margin: 0;
@@ -282,6 +265,179 @@
       background-color: rgba(191, 164, 122, 0.1);
     }
     
+    .submenu-intro {
+      font-size: 16px;
+      color: #5f5145;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      text-align: center;
+      font-style: italic;
+    }
+    
+    .ingredient-detail {
+      margin-bottom: 40px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.4);
+      border-radius: 16px;
+      border-left: 4px solid var(--gold);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .ingredient-detail:hover {
+      transform: translateX(5px);
+      box-shadow: 0 8px 25px rgba(191, 164, 122, 0.15);
+    }
+    
+    .ingredient-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+    
+    .ingredient-latin {
+      font-style: italic;
+      font-size: 14px;
+      color: #8c7a6a;
+      margin-left: 10px;
+    }
+    
+    .ingredient-description {
+      font-size: 15px;
+      color: #5f5145;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    
+    .ingredient-description strong {
+      color: var(--charcoal);
+    }
+    
+    .ingredient-why {
+      font-size: 14px;
+      color: #6d5f52;
+      font-style: italic;
+      background: rgba(191, 164, 122, 0.1);
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+    
+    .botanica-promise {
+      background: linear-gradient(135deg, var(--soft-beige) 0%, rgba(191, 164, 122, 0.1) 100%);
+      padding: 30px 25px;
+      border-left: 4px solid var(--gold);
+      border-radius: 16px;
+      margin-top: 40px;
+    }
+    
+    .botanica-promise h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: var(--charcoal);
+      margin-bottom: 15px;
+    }
+    
+    .botanica-promise p {
+      font-size: 15px;
+      color: #5f5145;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .ritual {
+      max-width: 700px;
+      text-align: center;
+      margin: 0 auto 60px auto;
+    }
+    .ritual img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 22px rgba(191, 164, 122, 0.2);
+      margin-top: 32px;
+    }
+    .testimonials {
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .testimonial {
+      background-color: var(--beige);
+      padding: 28px 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(191, 164, 122, 0.15);
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--charcoal);
+      flex: 1 1 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(191, 164, 122, 0.25);
+    }
+    .testimonial::before {
+      content: '';
+    }
+    .testimonial cite {
+      display: block;
+      margin-top: 20px;
+      font-style: normal;
+      font-weight: 700;
+      color: var(--charcoal);
+      text-align: right;
+    }
+    .newsletter {
+      max-width: 400px;
+      margin: 0 auto 80px auto;
+    }
+    .newsletter form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .newsletter input[type="email"] {
+      padding: 12px 16px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .newsletter input[type="email"]:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(191, 164, 122, 0.2);
+    }
+    .newsletter button {
+      background-color: var(--charcoal);
+      color: var(--gold);
+      padding: 12px 24px;
+      border-radius: 25px;
+      border: none;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(43, 43, 43, 0.3);
+      transition: all 0.3s ease;
+    }
+    .newsletter button:hover {
+      background-color: var(--gold);
+      color: var(--charcoal);
+      box-shadow: 0 8px 22px rgba(191, 164, 122, 0.7);
+      transform: translateY(-2px);
+    }
+    #thank-you {
+      display: none;
+      font-size: 14px;
+      color: #5f4f42;
+      margin-top: 14px;
+      text-align: center;
+    }
+
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -302,12 +458,6 @@
       }
     }
   </style>
-  
-  <!-- Preload critical fonts with font-display: swap -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
 
@@ -320,7 +470,7 @@
     <button class="btn-primary" type="button">Experience the Elixir</button>
   </div>
   <div class="image">
-    <!-- Using CSS gradient placeholder instead of broken image -->
+    <img src="Hero Images/Hero Presentation.png" alt="Jar of Rescue & Restore Balm" style="width: 100%; max-width: 500px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" loading="lazy" decoding="async">
   </div>
 </section>
 
@@ -366,15 +516,10 @@
     <p>
       Embrace a mindful skincare ritual each morning and night: gently warm a small amount of balm between your fingertips, then massage over face, pulse points, or areas in need of deep restoration. Let the sacred botanicals envelop your senses and reveal your skin's natural luminosity.
     </p>
-    <!-- Optimized larger image with proper sizing -->
     <img
-      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='500'%3E%3Crect width='100%25' height='100%25' fill='%23e9e3dc'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23bfa47a' font-size='20'%3E🌿 Loading Balm Image...%3C/text%3E%3C/svg%3E"
-      data-src="Hero Images/Rescue and Restore Balm.png"
+      src="Hero Images/Rescue and Restore Balm.png"
       loading="lazy"
       decoding="async"
-      width="700"
-      height="500"
-      style="width: 100%; max-width: 700px; border-radius: 16px; box-shadow: 0 8px 22px rgba(191, 164, 122, 0.2); margin-top: 32px;"
       alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening." />
   </div>
 
@@ -472,185 +617,11 @@
   <p>&copy; 2025 Hymne Solide. All rights reserved.</p>
   <a href="privacy-policy.html" style="color: #5f5145; text-decoration: underline;">Privacy Policy</a> &nbsp;|&nbsp;
   <a href="terms-of-service.html" style="color: #5f5145; text-decoration: underline;">Terms of Service</a>
+  </div>
 </footer>
 
-<!-- Load non-critical CSS asynchronously -->
-<style id="non-critical-css" media="print" onload="this.media='all'">
-.ritual {
-  max-width: 700px;
-  text-align: center;
-  margin: 0 auto 60px auto;
-}
-.ritual img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 8px 22px rgba(191, 164, 122, 0.2);
-  margin-top: 32px;
-}
-.testimonials {
-  max-width: 900px;
-  margin: 0 auto 60px auto;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.testimonial {
-  background-color: var(--beige);
-  padding: 28px 24px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(191, 164, 122, 0.15);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-style: italic;
-  font-size: 16px;
-  color: var(--charcoal);
-  flex: 1 1 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.testimonial:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(191, 164, 122, 0.25);
-}
-.testimonial cite {
-  display: block;
-  margin-top: 20px;
-  font-style: normal;
-  font-weight: 700;
-  color: var(--charcoal);
-  text-align: right;
-}
-.newsletter {
-  max-width: 400px;
-  margin: 0 auto 80px auto;
-}
-.newsletter form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.newsletter input[type="email"] {
-  padding: 12px 16px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-.newsletter input[type="email"]:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(191, 164, 122, 0.2);
-}
-.newsletter button {
-  background-color: var(--charcoal);
-  color: var(--gold);
-  padding: 12px 24px;
-  border-radius: 25px;
-  border: none;
-  font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(43, 43, 43, 0.3);
-  transition: all 0.3s ease;
-}
-.newsletter button:hover {
-  background-color: var(--gold);
-  color: var(--charcoal);
-  box-shadow: 0 8px 22px rgba(191, 164, 122, 0.7);
-  transform: translateY(-2px);
-}
-#thank-you {
-  display: none;
-  font-size: 14px;
-  color: #5f4f42;
-  margin-top: 14px;
-  text-align: center;
-}
-.submenu-intro {
-  font-size: 16px;
-  color: #5f5145;
-  margin-bottom: 30px;
-  line-height: 1.6;
-  text-align: center;
-  font-style: italic;
-}
-.ingredient-detail {
-  margin-bottom: 40px;
-  padding: 25px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 16px;
-  border-left: 4px solid var(--gold);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.ingredient-detail:hover {
-  transform: translateX(5px);
-  box-shadow: 0 8px 25px rgba(191, 164, 122, 0.15);
-}
-.ingredient-name {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 22px;
-  color: var(--charcoal);
-  margin-bottom: 8px;
-}
-.ingredient-latin {
-  font-style: italic;
-  font-size: 14px;
-  color: #8c7a6a;
-  margin-left: 10px;
-}
-.ingredient-description {
-  font-size: 15px;
-  color: #5f5145;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-.ingredient-description strong {
-  color: var(--charcoal);
-}
-.ingredient-why {
-  font-size: 14px;
-  color: #6d5f52;
-  font-style: italic;
-  background: rgba(191, 164, 122, 0.1);
-  padding: 12px 15px;
-  border-radius: 8px;
-  margin-top: 15px;
-}
-.botanica-promise {
-  background: linear-gradient(135deg, var(--soft-beige) 0%, rgba(191, 164, 122, 0.1) 100%);
-  padding: 30px 25px;
-  border-left: 4px solid var(--gold);
-  border-radius: 16px;
-  margin-top: 40px;
-}
-.botanica-promise h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 24px;
-  color: var(--charcoal);
-  margin-bottom: 15px;
-}
-.botanica-promise p {
-  font-size: 15px;
-  color: #5f5145;
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-</style>
 
 <script>
-  // Preload critical resources immediately
-  (function() {
-    const criticalImg = new Image();
-    criticalImg.src = 'Pages/Hero Presentation.png';
-    criticalImg.onload = function() {
-      // Apply image after it's loaded to prevent layout shift
-      const heroImage = document.querySelector('.hero .image');
-      if (heroImage) {
-        heroImage.style.backgroundImage = "url('Pages/Hero Presentation.png')";
-      }
-    };
-  })();
-
-  // Critical inline JavaScript for performance
   function showThankYou(event) {
     event.preventDefault();
     const form = event.target;
@@ -680,50 +651,7 @@
       closeIngredientsSubmenu();
     }
   });
-
-  // Update font families once fonts are loaded
-  document.fonts.ready.then(function() {
-    document.documentElement.style.setProperty('--serif-font', "'Playfair Display', Georgia, serif");
-    document.documentElement.style.setProperty('--sans-font', "'Inter', system-ui, sans-serif");
-    
-    // Update elements to use loaded fonts
-    const serifElements = document.querySelectorAll('.logo, .hero h1, .section h2, .submenu-title, .ingredient-name, .botanica-promise h3, .testimonial');
-    serifElements.forEach(el => {
-      el.style.fontFamily = "var(--serif-font, Georgia, serif)";
-    });
-    
-    const sansElements = document.querySelectorAll('body, .ingredients-toggle');
-    sansElements.forEach(el => {
-      el.style.fontFamily = "var(--sans-font, system-ui, sans-serif)";
-    });
-  });
-
-  // Lazy load images
-  const lazyImages = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
-        observer.unobserve(img);
-      }
-    });
-  });
-  
-  lazyImages.forEach(img => imageObserver.observe(img));
-
-  // Preload critical resources
-  window.addEventListener('load', function() {
-    const criticalResources = [
-      'Hero Images/Rescue and Restore Balm.png'
-    ];
-    
-    criticalResources.forEach(src => {
-      const link = document.createElement('link');
-      link.rel = 'prefetch';
-      link.href = src;
-      document.head.appendChild(link);
-    });
-  });
 </script>
+
+</body>
+</html>
