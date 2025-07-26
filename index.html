@@ -30,6 +30,9 @@
   <link rel="manifest" href="Favicon/site.webmanifest">
   <meta name="description" content="Luxurious rosehip balm crafted with wild botanicals to restore your skin's natural glow." />
   
+  <!-- Preload critical hero image for fastest LCP -->
+  <link rel="preload" as="image" href="Pages/Hero Presentation.png" fetchpriority="high">
+  
   <!-- Critical CSS inline for fastest render -->
   <style>
     :root {
@@ -90,18 +93,25 @@
     .hero .image {
       flex: 1 1 400px;
       min-height: 400px;
-      background: linear-gradient(135deg, #e9e3dc 0%, #d4c4a0 50%, #bfa47a 100%);
+      background-image: url('Pages/Hero Presentation.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       position: relative;
     }
     .hero .image::before {
-      content: '🌿';
-      font-size: 60px;
-      opacity: 0.3;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(233, 227, 220, 0.1) 0%, rgba(212, 196, 160, 0.05) 50%, rgba(191, 164, 122, 0.1) 100%);
+      border-radius: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
     .btn-primary {
@@ -183,17 +193,17 @@
     .ingredients-toggle {
       background: none;
       border: none;
-      color: #8b6914;
+      color: #6b5504;
       font-size: 14px;
       cursor: pointer;
-      opacity: 0.8;
+      opacity: 1;
       transition: opacity 0.3s ease;
       margin-top: 8px;
       font-family: inherit;
-      font-weight: 500;
+      font-weight: 600;
     }
     .ingredients-toggle:hover {
-      opacity: 1;
+      color: #4a3a02;
     }
     
     .ingredients-submenu {
@@ -356,15 +366,15 @@
     <p>
       Embrace a mindful skincare ritual each morning and night: gently warm a small amount of balm between your fingertips, then massage over face, pulse points, or areas in need of deep restoration. Let the sacred botanicals envelop your senses and reveal your skin's natural luminosity.
     </p>
-    <!-- Lazy loaded image with proper dimensions -->
+    <!-- Optimized larger image with proper sizing -->
     <img
-      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='100%25' height='100%25' fill='%23e9e3dc'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23bfa47a' font-size='24'%3E🌿 Balm Image%3C/text%3E%3C/svg%3E"
+      src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='500'%3E%3Crect width='100%25' height='100%25' fill='%23e9e3dc'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23bfa47a' font-size='20'%3E🌿 Loading Balm Image...%3C/text%3E%3C/svg%3E"
       data-src="Hero Images/Rescue and Restore Balm.png"
       loading="lazy"
       decoding="async"
-      width="600"
-      height="400"
-      style="width: 100%; border-radius: 16px; box-shadow: 0 8px 22px rgba(191, 164, 122, 0.2); margin-top: 32px;"
+      width="700"
+      height="500"
+      style="width: 100%; max-width: 700px; border-radius: 16px; box-shadow: 0 8px 22px rgba(191, 164, 122, 0.2); margin-top: 32px;"
       alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening." />
   </div>
 
@@ -627,6 +637,19 @@
 </style>
 
 <script>
+  // Preload critical resources immediately
+  (function() {
+    const criticalImg = new Image();
+    criticalImg.src = 'Pages/Hero Presentation.png';
+    criticalImg.onload = function() {
+      // Apply image after it's loaded to prevent layout shift
+      const heroImage = document.querySelector('.hero .image');
+      if (heroImage) {
+        heroImage.style.backgroundImage = "url('Pages/Hero Presentation.png')";
+      }
+    };
+  })();
+
   // Critical inline JavaScript for performance
   function showThankYou(event) {
     event.preventDefault();
