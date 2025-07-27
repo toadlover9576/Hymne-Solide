@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Open Graph (Facebook, Messenger, LinkedIn) -->
-<meta name="keywords" content="natural face balm, botanical healing for skin, organic skincare ingredients, non-toxic skincare ritual, plant-based beauty, eco-luxury skincare, handmade skincare products, glow-boosting balm, regenerative face cream alternative, artisan-crafted skincare" />
-<meta name="twitter:description" content="Handmade skincare powered by organic ingredients, wild botanicals, and ancient rituals. Eco-luxury for naturally radiant skin." />
-<meta name="description" content="Experience artisan-crafted, glow-boosting skincare with our botanical face balm – handmade from organic, plant-based ingredients for radiant, renewed skin." />
-<meta property="og:title" content="Hymne Solide | Botanical Rosehip Balm for Radiant, Restored Skin" />
-<meta property="og:description" content="A handcrafted blend of wild rosehip oil, calendula, and mango butter – designed to nourish, soothe, and restore your skin's natural glow." />
-<meta property="og:url" content="https://hymne-solide.netlify.app/" />
-<meta property="og:type" content="website" />
-<!-- Twitter Card -->
-<meta name="twitter:title" content="Natural Face Balm | Artisan-Crafted Botanical Skincare" />
-<meta name="twitter:description" content="Handmade skincare powered by organic ingredients, wild botanicals, and ancient rituals. Eco-luxury for naturally radiant skin." />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Hymne Solide | Botanical Rosehip Balm for Radiant, Restored Skin" />
-<meta name="twitter:description" content="A luxurious balm crafted with wild botanicals to renew and revitalize your skin. Discover true skincare ritual." />
-  <meta name="google-site-verification" content="E7knuFVZA_dGkubXqO4pMzNhFaQk7aSImN985b-rjGs" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Rescue & Restore Balm by Hymne Solide – an artisanal rosehip balm crafted from wild-harvested ingredients to nourish, regenerate, and restore your skin's natural glow." />
   <title>Rescue & Restore Balm – Hymne Solide</title>
-    <!-- Favicon and App Icons -->
-  <link rel="icon" href="Favicon/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="Favicon/android-chrome-512x512.png">
-  <link rel="manifest" href="Favicon/site.webmanifest">
-  <meta name="description" content="Luxurious rosehip balm crafted with wild botanicals to restore your skin's natural glow." />
-  <!-- Preconnect for faster font loading -->
+  <meta name="description" content="Experience artisan-crafted, glow-boosting skincare with our botanical face balm – handmade from organic, plant-based ingredients for radiant, renewed skin." />
+  
+  <!-- Critical performance optimizations -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Preload critical font with font-display swap for performance -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap"></noscript>
+  
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" href="Hero Images/Hero Presentation.png" fetchpriority="high">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hymne Solide | Botanical Rosehip Balm for Radiant, Restored Skin" />
+  <meta property="og:description" content="A handcrafted blend of wild rosehip oil, calendula, and mango butter – designed to nourish, soothe, and restore your skin's natural glow." />
+  <meta property="og:url" content="https://hymne-solide.netlify.app/" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Natural Face Balm | Artisan-Crafted Botanical Skincare" />
+  <meta name="twitter:description" content="Handmade skincare powered by organic ingredients, wild botanicals, and ancient rituals. Eco-luxury for naturally radiant skin." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="Favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+  
   <style>
     :root {
       --charcoal: #2b2b2b;
@@ -44,62 +41,76 @@
       --light-gold: #d4c4a0;
       --soft-beige: #f4efe8;
     }
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background-color: var(--cream);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      font-display: swap;
     }
+    
     .logo {
       font-family: 'Playfair Display', serif;
       font-size: 24px;
       font-weight: 700;
       color: var(--text);
       text-align: center;
-      padding: 32px 0;
+      padding: 20px 0;
     }
+    
     .hero {
       min-height: 80vh;
       background-color: var(--beige);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 80px;
+      padding: 40px 20px;
       flex-wrap: wrap;
       gap: 40px;
     }
+    
     .hero .text {
       max-width: 600px;
       flex: 1 1 400px;
     }
+    
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 44px;
+      font-size: clamp(28px, 5vw, 44px);
       color: var(--charcoal);
       margin-bottom: 16px;
       line-height: 1.1;
     }
+    
     .hero p {
       font-size: 18px;
       color: #5f5145;
       margin-bottom: 32px;
     }
+    
     .hero .image {
       flex: 1 1 400px;
-      min-height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    
+    .hero img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
-
+    
     .btn-primary {
       background-color: var(--charcoal);
       color: var(--gold);
@@ -111,25 +122,30 @@
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(43, 43, 43, 0.3);
       transition: all 0.3s ease;
+      display: inline-block;
     }
+    
     .btn-primary:hover {
       background-color: var(--gold);
       color: var(--charcoal);
       box-shadow: 0 10px 25px rgba(191, 164, 122, 0.7);
       transform: translateY(-2px);
     }
+    
     .section {
-      padding: 80px;
+      padding: 60px 20px;
       max-width: 900px;
-      margin: 0 auto 80px auto;
+      margin: 0 auto;
     }
+    
     .section h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 36px;
+      font-size: clamp(28px, 4vw, 36px);
       margin-bottom: 24px;
       color: var(--charcoal);
       text-align: center;
     }
+    
     .story-text {
       font-size: 18px;
       color: #5f5145;
@@ -138,20 +154,21 @@
       max-width: 720px;
       margin: 0 auto 40px auto;
     }
+    
     .story-text strong {
       color: var(--charcoal);
       font-weight: 700;
     }
+    
     .benefits-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
       max-width: 720px;
       margin: 0 auto 60px auto;
     }
+    
     .benefit-item {
-      flex: 1 1 300px;
       background-color: var(--beige);
       border-radius: 12px;
       padding: 24px 20px;
@@ -164,29 +181,31 @@
       gap: 14px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
-      position: relative;
     }
+    
     .benefit-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 30px rgba(191, 164, 122, 0.25);
     }
+    
     .benefit-icon {
       font-size: 24px;
       color: var(--gold);
+      flex-shrink: 0;
     }
-
-    /* Fixed contrast for accessibility - improved from gold to dark text */
+    
     .ingredients-toggle {
       background: none;
       border: none;
-      color: #2b2b2b;
+      color: #1a1a1a;
       font-size: 14px;
       cursor: pointer;
       font-weight: 600;
       margin-top: 8px;
-      font-family: 'Inter', sans-serif;
+      font-family: inherit;
       transition: color 0.3s ease;
     }
+    
     .ingredients-toggle:hover {
       color: var(--gold);
     }
@@ -195,9 +214,7 @@
       position: fixed;
       top: 0;
       right: -100%;
-      width: 50%;
-      min-width: 400px;
-      max-width: 600px;
+      width: min(90vw, 600px);
       height: 100vh;
       background: linear-gradient(135deg, var(--cream) 0%, var(--soft-beige) 100%);
       backdrop-filter: blur(20px);
@@ -277,22 +294,16 @@
     }
     
     .ingredient-detail {
-      margin-bottom: 40px;
-      padding: 25px;
+      margin-bottom: 30px;
+      padding: 20px;
       background: rgba(255, 255, 255, 0.4);
-      border-radius: 16px;
+      border-radius: 12px;
       border-left: 4px solid var(--gold);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    
-    .ingredient-detail:hover {
-      transform: translateX(5px);
-      box-shadow: 0 8px 25px rgba(191, 164, 122, 0.15);
     }
     
     .ingredient-name {
       font-family: 'Playfair Display', serif;
-      font-size: 22px;
+      font-size: 20px;
       color: var(--charcoal);
       margin-bottom: 8px;
     }
@@ -327,15 +338,15 @@
     
     .botanica-promise {
       background: linear-gradient(135deg, var(--soft-beige) 0%, rgba(191, 164, 122, 0.1) 100%);
-      padding: 30px 25px;
+      padding: 25px;
       border-left: 4px solid var(--gold);
-      border-radius: 16px;
-      margin-top: 40px;
+      border-radius: 12px;
+      margin-top: 30px;
     }
     
     .botanica-promise h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
+      font-size: 22px;
       color: var(--charcoal);
       margin-bottom: 15px;
     }
@@ -346,45 +357,47 @@
       line-height: 1.6;
       margin-bottom: 12px;
     }
-
+    
     .ritual {
       max-width: 700px;
       text-align: center;
       margin: 0 auto 60px auto;
     }
+    
     .ritual img {
       width: 100%;
+      max-width: 400px;
+      height: auto;
       border-radius: 16px;
       box-shadow: 0 8px 22px rgba(191, 164, 122, 0.2);
       margin-top: 32px;
     }
+    
     .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
       max-width: 900px;
       margin: 0 auto 60px auto;
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-      justify-content: center;
     }
+    
     .testimonial {
       background-color: var(--beige);
-      padding: 28px 24px;
+      padding: 24px;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(191, 164, 122, 0.15);
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: 16px;
       color: var(--charcoal);
-      flex: 1 1 280px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    
     .testimonial:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 35px rgba(191, 164, 122, 0.25);
     }
-    .testimonial::before {
-      content: '';
-    }
+    
     .testimonial cite {
       display: block;
       margin-top: 20px;
@@ -393,15 +406,18 @@
       color: var(--charcoal);
       text-align: right;
     }
+    
     .newsletter {
       max-width: 400px;
-      margin: 0 auto 80px auto;
+      margin: 0 auto 60px auto;
     }
+    
     .newsletter form {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+    
     .newsletter input[type="email"] {
       padding: 12px 16px;
       border-radius: 25px;
@@ -409,11 +425,13 @@
       font-size: 15px;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
+    
     .newsletter input[type="email"]:focus {
       outline: none;
       border-color: var(--gold);
       box-shadow: 0 0 0 3px rgba(191, 164, 122, 0.2);
     }
+    
     .newsletter button {
       background-color: var(--charcoal);
       color: var(--gold);
@@ -426,12 +444,14 @@
       box-shadow: 0 5px 15px rgba(43, 43, 43, 0.3);
       transition: all 0.3s ease;
     }
+    
     .newsletter button:hover {
       background-color: var(--gold);
       color: var(--charcoal);
       box-shadow: 0 8px 22px rgba(191, 164, 122, 0.7);
       transform: translateY(-2px);
     }
+    
     #thank-you {
       display: none;
       font-size: 14px;
@@ -439,24 +459,42 @@
       margin-top: 14px;
       text-align: center;
     }
-
+    
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #5f5145;
+      background-color: #f1ede9;
+      border-top: 1px solid #d8cec4;
+    }
+    
+    footer a {
+      color: #5f5145;
+      text-decoration: underline;
+    }
+    
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
-        padding: 40px 24px;
+        padding: 20px;
+        text-align: center;
       }
-      .hero .image {
-        height: 320px;
-      }
+      
       .section {
-        padding: 40px 24px;
+        padding: 40px 20px;
       }
-      .hero h1 {
-        font-size: 32px;
+      
+      .benefits-list {
+        grid-template-columns: 1fr;
       }
-      .ingredients-submenu {
-        width: 90%;
-        min-width: auto;
+      
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+      
+      .submenu-title {
+        font-size: 24px;
       }
     }
   </style>
@@ -474,11 +512,10 @@
   <div class="image">
     <img src="Hero Images/Hero Presentation.png" 
          alt="Jar of Rescue & Restore Balm" 
-         width="364" 
-         height="364"
+         width="400" 
+         height="400"
          fetchpriority="high"
-         decoding="async"
-         style="width: 100%; max-width: 500px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+         decoding="async">
   </div>
 </section>
 
@@ -525,8 +562,8 @@
       Embrace a mindful skincare ritual each morning and night: gently warm a small amount of balm between your fingertips, then massage over face, pulse points, or areas in need of deep restoration. Let the sacred botanicals envelop your senses and reveal your skin's natural luminosity.
     </p>
     <img src="Hero Images/Rescue and Restore Balm.png"
-         width="364"
-         height="364"
+         width="400"
+         height="400"
          loading="lazy"
          decoding="async"
          alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening." />
@@ -603,7 +640,7 @@
 
   <div class="ingredient-detail">
     <h3 class="ingredient-name">Vitamin E Oil <span class="ingredient-latin">(Tocopherol)</span></h3>
-    <p class="ingredient-description"><strong>The Antioxidant Shield —</strong> Our non-GMO vitamin E oil is derived from sunflower seeds, providing the most bioactive form of this essential nutrient. As a powerful antioxidant, it protects your skin from environmental damage while supporting the skin barrier's natural repair processes. It also naturally preserves our formula, ensuring every drop remains fresh and potent.</p>
+    <p class="ingredient-description"><strong>The Antioxidant Shield —</strong> Our non-GMO vitamin E oil is derived from sunflower seeds, providing the most bioactive form of this essential nutrient. As a powerful antioxidant, it protects your skin from environmental damage while supporting the skin barrier's natural repair processes. It also naturally preserveves our formula, ensuring every drop remains fresh and potent.</p>
     <div class="ingredient-why"><strong>Why it matters:</strong> Clinical studies show vitamin E can help reduce the appearance of scars and support healthy skin regeneration.</div>
   </div>
 
@@ -622,12 +659,10 @@
   </div>
 </div>
 
-<footer style="padding: 40px 20px; text-align: center; font-size: 14px; color: #5f5145; background-color: #f1ede9; border-top: 1px solid #d8cec4;">
+<footer>
   <p>&copy; 2025 Hymne Solide. All rights reserved.</p>
-  <a href="privacy-policy.html" style="color: #5f5145; text-decoration: underline;">Privacy Policy</a> &nbsp;|&nbsp;
-  <a href="terms-of-service.html" style="color: #5f5145; text-decoration: underline;">Terms of Service</a>
+  <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a>
 </footer>
-
 
 <script>
   function showThankYou(event) {
@@ -653,7 +688,6 @@
     document.body.style.overflow = 'auto';
   }
 
-  // Close submenu with Escape key
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       closeIngredientsSubmenu();
