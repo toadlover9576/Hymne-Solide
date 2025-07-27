@@ -29,8 +29,10 @@
   <link rel="icon" type="image/png" sizes="512x512" href="Favicon/android-chrome-512x512.png">
   <link rel="manifest" href="Favicon/site.webmanifest">
   <meta name="description" content="Luxurious rosehip balm crafted with wild botanicals to restore your skin's natural glow." />
+  <!-- Preconnect for faster font loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload critical font with font-display swap for performance -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -91,10 +93,9 @@
     .hero .image {
       flex: 1 1 400px;
       min-height: 400px;
-      background-image: url('Hymne-Solide/%20Hero%20Images/%20Hero%20Presentation/hero-presentation.png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
@@ -174,16 +175,16 @@
       color: var(--gold);
     }
 
-    /* Ingredients Submenu Styling */
+    /* Fixed contrast for accessibility - improved from gold to dark text */
     .ingredients-toggle {
       background: none;
       border: none;
       color: #2b2b2b;
       font-size: 14px;
       cursor: pointer;
+      font-weight: 600;
       margin-top: 8px;
       font-family: 'Inter', sans-serif;
-      font-weight: 600;
       transition: color 0.3s ease;
     }
     .ingredients-toggle:hover {
@@ -471,7 +472,13 @@
     <button class="btn-primary" type="button">Experience the Elixir</button>
   </div>
   <div class="image">
-    <img src="Hero Images/Hero Presentation.png" alt="Jar of Rescue & Restore Balm" style="width: 100%; max-width: 500px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" width="364" height="364" fetchpriority="high" decoding="async">
+    <img src="Hero Images/Hero Presentation.png" 
+         alt="Jar of Rescue & Restore Balm" 
+         width="364" 
+         height="364"
+         fetchpriority="high"
+         decoding="async"
+         style="width: 100%; max-width: 500px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
   </div>
 </section>
 
@@ -517,13 +524,12 @@
     <p>
       Embrace a mindful skincare ritual each morning and night: gently warm a small amount of balm between your fingertips, then massage over face, pulse points, or areas in need of deep restoration. Let the sacred botanicals envelop your senses and reveal your skin's natural luminosity.
     </p>
-    <img
-      src="Hero Images/Rescue and Restore Balm.png"
-      loading="lazy"
-      decoding="async"
-      width="364"
-      height="364"
-      alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening." />
+    <img src="Hero Images/Rescue and Restore Balm.png"
+         width="364"
+         height="364"
+         loading="lazy"
+         decoding="async"
+         alt="Close-up of a frosted, matte-black amber glass bottle. A refreshing, light-colored balm is visible inside, swirling and curling up towards the opening." />
   </div>
 
   <section style="margin-top: 80px;">
@@ -620,7 +626,6 @@
   <p>&copy; 2025 Hymne Solide. All rights reserved.</p>
   <a href="privacy-policy.html" style="color: #5f5145; text-decoration: underline;">Privacy Policy</a> &nbsp;|&nbsp;
   <a href="terms-of-service.html" style="color: #5f5145; text-decoration: underline;">Terms of Service</a>
-  </div>
 </footer>
 
 
