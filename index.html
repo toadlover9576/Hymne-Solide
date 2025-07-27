@@ -6,7 +6,7 @@
 <meta name="twitter:description" content="Handmade skincare powered by organic ingredients, wild botanicals, and ancient rituals. Eco-luxury for naturally radiant skin." />
 <meta name="description" content="Experience artisan-crafted, glow-boosting skincare with our botanical face balm – handmade from organic, plant-based ingredients for radiant, renewed skin." />
 <meta property="og:title" content="Hymne Solide | Botanical Rosehip Balm for Radiant, Restored Skin" />
-<meta property="og:description" content="A handcrafted blend of wild rosehip oil, calendula, and mango butter – designed to nourish, soothe, and restore your skin’s natural glow." />
+<meta property="og:description" content="A handcrafted blend of wild rosehip oil, calendula, and mango butter – designed to nourish, soothe, and restore your skin's natural glow." />
 <meta property="og:url" content="https://hymne-solide.netlify.app/" />
 <meta property="og:type" content="website" />
 <!-- Twitter Card -->
@@ -542,13 +542,13 @@
   </section>
 
   <section class="newsletter">
-    <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="showThankYou(event)">
+    <form name="newsletter" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="newsletter" />
       <div style="display: none;"><label>Don't fill this out if you're human: <input name="bot-field" /></label></div>
       <input type="email" name="email" placeholder="you@example.com" required />
       <button type="submit">Subscribe</button>
-      <p id="thank-you">Thank you for subscribing — you'll hear from us soon 🌿</p>
     </form>
+    <p id="thank-you">Thank you for subscribing — you'll hear from us soon 🌿</p>
   </section>
 </section>
 
@@ -622,13 +622,6 @@
 
 
 <script>
-  function showThankYou(event) {
-    event.preventDefault();
-    const form = event.target;
-    form.querySelector('#thank-you').style.display = 'block';
-    form.reset();
-  }
-
   function openIngredientsSubmenu() {
     const submenu = document.getElementById('ingredientsSubmenu');
     const overlay = document.querySelector('.submenu-overlay');
@@ -651,6 +644,11 @@
       closeIngredientsSubmenu();
     }
   });
+
+  // Handle form submission success
+  if (window.location.search.includes('success=true')) {
+    document.getElementById('thank-you').style.display = 'block';
+  }
 </script>
 
 </body>
